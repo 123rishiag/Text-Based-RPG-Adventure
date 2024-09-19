@@ -8,9 +8,9 @@ namespace Level
         class LevelController5 : public LevelController
         {
         public:
-            LevelController5(int _numberOfEnemies, CharacterType _enemyType);
+            LevelController5(int _numberOfEnemies, Character::CharacterType _enemyType);
 
-            void UpgradeCharacter(Character* _character) override; // Overrided Function to Get UpgradeCharacter
+            void UpgradeCharacter(Character::CharacterController* _character) override; // Overrided Function to Get UpgradeCharacter
         };
     }
 }

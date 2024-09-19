@@ -15,7 +15,6 @@ namespace Level
 		None
 	};
 
-
 	// the string representation of Level Numbers
 	std::string LevelNumberToString(LevelNumber levelNumber) 
 	{
