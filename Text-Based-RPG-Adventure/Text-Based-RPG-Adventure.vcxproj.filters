@@ -26,5 +26,8 @@
     <ClInclude Include="header\Main\GameManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="header\Utility\Random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

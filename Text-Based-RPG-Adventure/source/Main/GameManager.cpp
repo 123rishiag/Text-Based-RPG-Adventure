@@ -1,8 +1,10 @@
 #include "../../header/Main/GameManager.h"
+#include "../../header/Utility/Random.h"
 #include<iostream>
 
 namespace Main
 {
+    using namespace Utility;
     using namespace std;
 
     GameManager::GameManager() 
