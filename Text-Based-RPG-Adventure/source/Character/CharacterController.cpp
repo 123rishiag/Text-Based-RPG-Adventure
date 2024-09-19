@@ -1,9 +1,11 @@
 #include "../../header/Character/CharacterController.h"
 #include "../../header/Utility/Random.h"
+#include <algorithm> // For find()
 
 namespace Character
 {
     using namespace Item;
+    using namespace Ability;
     using namespace Utility;
     using namespace std;
 
@@ -203,7 +205,7 @@ namespace Character
         return _specialAbilityLocation;
     }
 
-    void CharacterController::AddSpecialAbility(unique_ptr<SpecialAbility> _specialAbility) 
+    void CharacterController::AddSpecialAbility(unique_ptr<SpecialAbilityController> _specialAbility)
     {
         bool _isAlreadyPresent = false;
         SpecialAbilityType _specialAbilityType = _specialAbility->GetSpecialAbilityType();
@@ -221,7 +223,7 @@ namespace Character
         }
     }
 
-    void CharacterController::PerformSpecialAbility(CharacterController* targetCharacter, PlayerSelectActionType selectedAction, SpecialAbility* _specialAbility) 
+    void CharacterController::PerformSpecialAbility(CharacterController* targetCharacter, PlayerSelectActionType selectedAction, SpecialAbilityController* _specialAbility)
     {
         cout << "Special Ability Activated: " << SpecialAbilityTypeToString(_specialAbility->GetSpecialAbilityType()) << endl;
         cout << this->GetCharacterName() << " " << SpecialAbilityTypeToDefinition(_specialAbility->GetSpecialAbilityType())
@@ -245,7 +247,7 @@ namespace Character
     {
         if (selectedAction == PlayerSelectActionType::Damage) 
         {
-            vector<SpecialAbility*> _applicableSpecialAbilities; // To store all the special abilities
+            vector<SpecialAbilityController*> _applicableSpecialAbilities; // To store all the special abilities
             // applicable within Probability Limit
             float _totalWeight = 0; // To store the total weight
 
@@ -264,7 +266,7 @@ namespace Character
             // ability(weighted) among them
             if (!_applicableSpecialAbilities.empty()) 
             {
-                sort(_applicableSpecialAbilities.begin(), _applicableSpecialAbilities.end(), [](SpecialAbility* a, SpecialAbility* b) 
+                sort(_applicableSpecialAbilities.begin(), _applicableSpecialAbilities.end(), [](SpecialAbilityController* a, SpecialAbilityController* b)
                     {
                         return a->GetSpecialAbilityProbability() > b->GetSpecialAbilityProbability();
                     }

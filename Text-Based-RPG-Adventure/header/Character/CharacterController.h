@@ -4,13 +4,10 @@
 #include <iostream>  // For Standard IO Operations
 #include "../../header/Character/CharacterType.h"
 #include "../../header/Item/ItemController.h"
+#include "../../header/Ability/SpecialAbilityController.h"
 
 namespace Character
 {
-    enum class SpecialAbilityType;
-
-    class SpecialAbility;
-
     class CharacterController
     {
     private:
@@ -37,7 +34,7 @@ namespace Character
         int maxDefence;        // Maximum Defence
         bool canBlock = false; // Flag to Check if the Character can Block
         bool canTakeDamage = true; // Flag to Check if Character can Take DamageAttacks
-        std::vector<std::unique_ptr<SpecialAbility>> specialAbilities;    // Special Abilities of Character
+        std::vector<std::unique_ptr<Ability::SpecialAbilityController>> specialAbilities;    // Special Abilities of Character
         std::vector<std::unique_ptr<Item::ItemController>> items; // Items Owned by Character
 
     public:
@@ -78,9 +75,9 @@ namespace Character
         // Other Functions
         int GetItemLocation(Item::ItemType _itemType) const; // Function to Get Item Location
         void AddItem(std::unique_ptr<Item::ItemController> _item); // Function to Add Items in Character's Inventory
-        int GetSpecialAbilityLocation(SpecialAbilityType _specialAbilityType) const; // Function to Get Special Ability Location
-        void AddSpecialAbility(std::unique_ptr<SpecialAbility> _specialAbility); // Function to Add Special Ability in Character's Skillset
-        void PerformSpecialAbility(CharacterController* targetCharacter, PlayerSelectActionType selectedAction, SpecialAbility* _specialAbility);
+        int GetSpecialAbilityLocation(Ability::SpecialAbilityType _specialAbilityType) const; // Function to Get Special Ability Location
+        void AddSpecialAbility(std::unique_ptr<Ability::SpecialAbilityController> _specialAbility); // Function to Add Special Ability in Character's Skillset
+        void PerformSpecialAbility(CharacterController* targetCharacter, PlayerSelectActionType selectedAction, Ability::SpecialAbilityController* _specialAbility);
         void PerformNormalAbility(CharacterController* targetCharacter, PlayerSelectActionType selectedAction);
         void PerformAbility(CharacterController* targetCharacter, PlayerSelectActionType selectedAction, float _randomProbability);
 

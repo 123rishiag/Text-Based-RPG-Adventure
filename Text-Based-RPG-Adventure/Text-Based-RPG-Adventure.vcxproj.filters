@@ -81,6 +81,30 @@
     <ClCompile Include="source\Item\Controllers\AmuletItemController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\Ability\SpecialAbilityController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ability\Controllers\CriticalHitSpecialAbilityController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ability\Controllers\BlockerSpecialAbilityController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ability\Controllers\LifeStealSpecialAbilityController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ability\Controllers\RangedAttackSpecialAbilityController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ability\Controllers\GroundSlashSpecialAbilityController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ability\Controllers\SpeedDashSpecialAbilityController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ability\Controllers\HealthRegenerationSpecialAbilityController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\Main\GameManager.h">
@@ -156,6 +180,33 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="header\Item\Controllers\AmuletItemController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Ability\SpecialAbilityType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Ability\SpecialAbilityController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Ability\Controllers\CriticalHitSpecialAbilityController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Ability\Controllers\BlockerSpecialAbilityController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Ability\Controllers\LifeStealSpecialAbilityController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Ability\Controllers\RangedAttackSpecialAbilityController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Ability\Controllers\GroundSlashSpecialAbilityController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Ability\Controllers\SpeedDashSpecialAbilityController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Ability\Controllers\HealthRegenerationSpecialAbilityController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
