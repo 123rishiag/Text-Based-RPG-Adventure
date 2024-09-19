@@ -18,7 +18,7 @@ namespace Item
 	};
 
 	// the string representation of Item Type
-	std::string ItemTypeToString(ItemType itemType) 
+	inline std::string ItemTypeToString(ItemType itemType)
 	{
 		switch (itemType) 
 		{

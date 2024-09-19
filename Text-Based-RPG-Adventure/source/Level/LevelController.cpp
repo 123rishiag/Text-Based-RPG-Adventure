@@ -2,13 +2,30 @@
 #include "../../header/Character/CharacterController.h"
 #include "../../header/Character/Controllers/EnemyCharacterController.h"
 #include "../../header/Character/Controllers/BossEnemyCharacterController.h"
+#include "../../header/Item/Controllers/MapItemController.h"
+#include "../../header/Item/Controllers/SwordItemController.h"
+#include "../../header/Item/Controllers/ShieldItemController.h"
+#include "../../header/Item/Controllers/ArmourItemController.h"
+#include "../../header/Item/Controllers/BowItemController.h"
+#include "../../header/Item/Controllers/GauntletItemController.h"
+#include "../../header/Item/Controllers/BootItemController.h"
+#include "../../header/Item/Controllers/AmuletItemController.h"
+#include "../../header/Ability/Controllers/CriticalHitSpecialAbilityController.h"
+#include "../../header/Ability/Controllers/BlockerSpecialAbilityController.h"
+#include "../../header/Ability/Controllers/LifeStealSpecialAbilityController.h"
+#include "../../header/Ability/Controllers/RangedAttackSpecialAbilityController.h"
+#include "../../header/Ability/Controllers/GroundSlashSpecialAbilityController.h"
+#include "../../header/Ability/Controllers/SpeedDashSpecialAbilityController.h"
+#include "../../header/Ability/Controllers/HealthRegenerationSpecialAbilityController.h"
 
 namespace Level
 {
     using namespace Character;
     using namespace Character::Controller;
     using namespace Item;
+    using namespace Item::Controller;
     using namespace Ability;
+    using namespace Ability::Controller;
     using namespace std;
 
     LevelController::LevelController(int _numberOfEnemies, CharacterType _enemyType, LevelNumber _levelNumber)
@@ -76,19 +93,19 @@ namespace Level
         switch (_specialAbilityType) 
         {
         case SpecialAbilityType::CriticalHit:
-            return unique_ptr<SpecialAbilityController>(new CriticalHit(.10));
+            return make_unique<CriticalHitSpecialAbilityController>(.10);
         case SpecialAbilityType::Blocker:
-            return unique_ptr<SpecialAbilityController>(new Blocker(.10));
+            return make_unique<BlockerSpecialAbilityController>(.20);
         case SpecialAbilityType::LifeSteal:
-            return unique_ptr<SpecialAbilityController>(new LifeSteal(.10));
+            return make_unique<LifeStealSpecialAbilityController>(.30);
         case SpecialAbilityType::RangedAttack:
-            return unique_ptr<SpecialAbilityController>(new RangedAttack(.10));
+            return make_unique<RangedAttackSpecialAbilityController>(.40);
         case SpecialAbilityType::GroundSlash:
-            return unique_ptr<SpecialAbilityController>(new GroundSlash(.10));
+            return make_unique<GroundSlashSpecialAbilityController>(.30);
         case SpecialAbilityType::SpeedDash:
-            return unique_ptr<SpecialAbilityController>(new SpeedDash(.10));
+            return make_unique<SpeedDashSpecialAbilityController>(.20);
         case SpecialAbilityType::HealthRegeneration:
-            return unique_ptr<SpecialAbilityController>(new HealthRegeneration(.10));
+            return make_unique<HealthRegenerationSpecialAbilityController>(.10);
         default:
             return nullptr;
         }
@@ -99,21 +116,21 @@ namespace Level
         switch (_itemType) 
         {
         case ItemType::Map:
-            return unique_ptr<ItemController>(new Map("World Map"));
+            return make_unique<MapItemController>("World Map");
         case ItemType::Sword:
-            return unique_ptr<ItemController>(new Sword("Excalibur"));
+            return make_unique<SwordItemController>("Excalibur");
         case ItemType::Shield:
-            return unique_ptr<ItemController>(new Shield("Shield of Dragon"));
+            return make_unique<ShieldItemController>("Shield of Dragon");
         case ItemType::Armour:
-            return unique_ptr<ItemController>(new Armour("Chainmail"));
+            return make_unique<ArmourItemController>("Chainmail");
         case ItemType::Bow:
-            return unique_ptr<ItemController>(new Bow("Hunter's Bow"));
+            return make_unique<BowItemController>("Hunter's Bow");
         case ItemType::Gauntlet:
-            return unique_ptr<ItemController>(new Gauntlets("Gauntlets of Azeroth"));
+            return make_unique<GauntletItemController>("Gauntlets of Azeroth");
         case ItemType::Boot:
-            return unique_ptr<ItemController>(new Boots("Boots of Azeroth"));
+            return make_unique<BootItemController>("Boots of Azeroth");
         case ItemType::Amulet:
-            return unique_ptr<ItemController>(new Map("Amulet of Azeroth"));
+            return make_unique<AmuletItemController>("Amulet of Azeroth");
         default:
             return nullptr;
         }

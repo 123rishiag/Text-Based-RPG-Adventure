@@ -10,7 +10,7 @@ namespace Character
 	enum class PlayerSelectActionType { Damage, Heal, None };
 
 	// Function to return the string representation of Character Type
-	std::string CharacterTypeToString(CharacterType characterType) 
+	inline std::string CharacterTypeToString(CharacterType characterType)
 	{
 		switch (characterType) 
 		{
@@ -26,7 +26,7 @@ namespace Character
 	}
 
 	// Function to Select Action
-	PlayerSelectActionType PlayerSelectAction(char selectAction) 
+	inline PlayerSelectActionType PlayerSelectAction(char selectAction)
 	{
 		switch (selectAction) 
 		{
