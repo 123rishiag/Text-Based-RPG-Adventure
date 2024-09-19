@@ -1,6 +1,10 @@
 #pragma once
 #include "../../header/Ability/SpecialAbilityType.h"
-#include "../../header/Character/CharacterController.h"
+
+namespace Character
+{
+    class CharacterController;
+}
 
 namespace Ability
 {

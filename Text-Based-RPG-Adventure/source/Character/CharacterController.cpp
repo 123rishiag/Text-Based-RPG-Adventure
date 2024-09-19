@@ -146,7 +146,7 @@ namespace Character
 
     int CharacterController::GetItemLocation(ItemType _itemType) const 
     {
-        int _itemLocation;
+        int _itemLocation = -1;
         if (items.size() == 0) 
         {
             _itemLocation = -1;
@@ -185,7 +185,7 @@ namespace Character
 
     int CharacterController::GetSpecialAbilityLocation(SpecialAbilityType _specialAbilityType) const 
     {
-        int _specialAbilityLocation;
+        int _specialAbilityLocation = -1;
         if (specialAbilities.size() == 0) 
         {
             _specialAbilityLocation = -1;

@@ -1,4 +1,5 @@
 #include "../../../header/Ability/Controllers/HealthRegenerationSpecialAbilityController.h"
+#include "../../../header/Character/CharacterController.h"
 
 namespace Ability
 {

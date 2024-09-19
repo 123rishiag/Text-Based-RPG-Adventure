@@ -16,7 +16,7 @@ namespace Level
 	};
 
 	// the string representation of Level Numbers
-	std::string LevelNumberToString(LevelNumber levelNumber) 
+	inline std::string LevelNumberToString(LevelNumber levelNumber)
 	{
 		switch (levelNumber) 
 		{

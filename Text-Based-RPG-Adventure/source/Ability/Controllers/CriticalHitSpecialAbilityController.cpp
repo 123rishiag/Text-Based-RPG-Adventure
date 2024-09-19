@@ -1,4 +1,5 @@
 #include "../../../header/Ability/Controllers/CriticalHitSpecialAbilityController.h"
+#include "../../../header/Character/CharacterController.h"
 
 namespace Ability
 {

@@ -17,7 +17,7 @@ namespace Ability
     };
 
     // Function to return the string representation of Special Ability Type
-    std::string SpecialAbilityTypeToString(SpecialAbilityType specialAbilityType)
+    inline std::string SpecialAbilityTypeToString(SpecialAbilityType specialAbilityType)
     {
         switch (specialAbilityType) 
         {
@@ -41,7 +41,7 @@ namespace Ability
     }
 
     // Function to return the definition of Special Ability Type
-    std::string SpecialAbilityTypeToDefinition(SpecialAbilityType specialAbilityType) 
+    inline std::string SpecialAbilityTypeToDefinition(SpecialAbilityType specialAbilityType)
     {
         switch (specialAbilityType) 
         {

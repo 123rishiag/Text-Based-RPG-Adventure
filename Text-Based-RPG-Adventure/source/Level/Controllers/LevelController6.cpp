@@ -8,6 +8,7 @@ namespace Level
     {
         using namespace Character;
         using namespace Item;
+        using namespace Ability;
         using namespace std;
 
         LevelController6::LevelController6(int _numberOfEnemies, CharacterType _enemyType)

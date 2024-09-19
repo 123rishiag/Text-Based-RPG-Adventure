@@ -1,4 +1,5 @@
 #include "../../../header/Ability/Controllers/RangedAttackSpecialAbilityController.h"
+#include "../../../header/Character/CharacterController.h"
 
 namespace Ability
 {
