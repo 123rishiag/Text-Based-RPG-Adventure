@@ -128,9 +128,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="source\Level\Controllers\LevelController1.cpp" />
+    <ClCompile Include="source\Level\Controllers\LevelController2.cpp" />
+    <ClCompile Include="source\Level\Controllers\LevelController3.cpp" />
+    <ClCompile Include="source\Level\Controllers\LevelController4.cpp" />
+    <ClCompile Include="source\Level\Controllers\LevelController5.cpp" />
+    <ClCompile Include="source\Level\Controllers\LevelController6.cpp" />
+    <ClCompile Include="source\Level\LevelController.cpp" />
     <ClCompile Include="source\Main\GameManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="header\Level\Controllers\LevelController1.h" />
+    <ClInclude Include="header\Level\Controllers\LevelController2.h" />
+    <ClInclude Include="header\Level\Controllers\LevelController3.h" />
+    <ClInclude Include="header\Level\Controllers\LevelController4.h" />
+    <ClInclude Include="header\Level\Controllers\LevelController5.h" />
+    <ClInclude Include="header\Level\Controllers\LevelController6.h" />
+    <ClInclude Include="header\Level\LevelController.h" />
+    <ClInclude Include="header\Level\LevelNumber.h" />
     <ClInclude Include="header\Main\GameManager.h" />
     <ClInclude Include="header\Utility\Random.h" />
   </ItemGroup>

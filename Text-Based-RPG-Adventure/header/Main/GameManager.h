@@ -1,12 +1,10 @@
 #pragma once
 #include <memory>   // For Smart Pointers
+#include "../../header/Level/LevelController.h"
+#include "../../header/Level/LevelNumber.h"
 
 namespace Main
 {
-    enum class LevelNumber;
-
-    class Level;
-
     class Character;
 
     class GameManager 
@@ -14,11 +12,11 @@ namespace Main
     private:
         std::unique_ptr<Character> player = nullptr;
         Character* enemy = nullptr;
-        std::unique_ptr<Level> currentLevel = nullptr;
-        LevelNumber currentLevelNumber;
+        std::unique_ptr<Level::LevelController> currentLevel = nullptr;
+        Level::LevelNumber currentLevelNumber;
 
         void CreatePlayer(); // Function to Create Player
-        std::unique_ptr<Level> InitializeLevel(LevelNumber _levelNumber); // Function to Initialize Level
+        std::unique_ptr<Level::LevelController> InitializeLevel(Level::LevelNumber _levelNumber); // Function to Initialize Level
         void GenerateLevel(); // Function to GenerateLevel()
         void CharacterPerformAction(Character* _character1, Character* _character2); // Function to Choose Player Actions
         void RoundLoop(); // Function to Run Round Loop until Player or Enemy is Dead
