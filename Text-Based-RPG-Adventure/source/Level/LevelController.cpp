@@ -7,6 +7,7 @@ namespace Level
 {
     using namespace Character;
     using namespace Character::Controller;
+    using namespace Item;
     using namespace std;
 
     LevelController::LevelController(int _numberOfEnemies, CharacterType _enemyType, LevelNumber _levelNumber)
@@ -92,26 +93,26 @@ namespace Level
         }
     }
 
-    unique_ptr<Item> LevelController::GetItem(ItemType _itemType)
+    unique_ptr<ItemController> LevelController::GetItem(ItemType _itemType)
     {
         switch (_itemType) 
         {
         case ItemType::Map:
-            return unique_ptr<Item>(new Map("World Map"));
+            return unique_ptr<ItemController>(new Map("World Map"));
         case ItemType::Sword:
-            return unique_ptr<Item>(new Sword("Excalibur"));
+            return unique_ptr<ItemController>(new Sword("Excalibur"));
         case ItemType::Shield:
-            return unique_ptr<Item>(new Shield("Shield of Dragon"));
+            return unique_ptr<ItemController>(new Shield("Shield of Dragon"));
         case ItemType::Armour:
-            return unique_ptr<Item>(new Armour("Chainmail"));
+            return unique_ptr<ItemController>(new Armour("Chainmail"));
         case ItemType::Bow:
-            return unique_ptr<Item>(new Bow("Hunter's Bow"));
-        case ItemType::Gauntlets:
-            return unique_ptr<Item>(new Gauntlets("Gauntlets of Azeroth"));
-        case ItemType::Boots:
-            return unique_ptr<Item>(new Boots("Boots of Azeroth"));
+            return unique_ptr<ItemController>(new Bow("Hunter's Bow"));
+        case ItemType::Gauntlet:
+            return unique_ptr<ItemController>(new Gauntlets("Gauntlets of Azeroth"));
+        case ItemType::Boot:
+            return unique_ptr<ItemController>(new Boots("Boots of Azeroth"));
         case ItemType::Amulet:
-            return unique_ptr<Item>(new Map("Amulet of Azeroth"));
+            return unique_ptr<ItemController>(new Map("Amulet of Azeroth"));
         default:
             return nullptr;
         }

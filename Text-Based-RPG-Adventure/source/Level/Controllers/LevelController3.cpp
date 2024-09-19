@@ -6,6 +6,7 @@ namespace Level
     namespace Controller
     {
         using namespace Character;
+        using namespace Item;
 
         LevelController3::LevelController3(int _numberOfEnemies, CharacterType _enemyType)
             : LevelController(_numberOfEnemies, _enemyType, LevelNumber::Level3) { }

@@ -3,14 +3,13 @@
 #include <vector>   // For Vector Operations
 #include <iostream>  // For Standard IO Operations
 #include "../../header/Character/CharacterType.h"
+#include "../../header/Item/ItemController.h"
 
 namespace Character
 {
     enum class SpecialAbilityType;
-    enum class ItemType;
 
     class SpecialAbility;
-    class Item;
 
     class CharacterController
     {
@@ -39,7 +38,7 @@ namespace Character
         bool canBlock = false; // Flag to Check if the Character can Block
         bool canTakeDamage = true; // Flag to Check if Character can Take DamageAttacks
         std::vector<std::unique_ptr<SpecialAbility>> specialAbilities;    // Special Abilities of Character
-        std::vector<std::unique_ptr<Item>> items; // Items Owned by Character
+        std::vector<std::unique_ptr<Item::ItemController>> items; // Items Owned by Character
 
     public:
         CharacterController(std::string _characterName, int _health, int _healPercentage, int _meleeDamage,
@@ -77,8 +76,8 @@ namespace Character
         void ShowSpecialAbilities();
 
         // Other Functions
-        int GetItemLocation(ItemType _itemType) const; // Function to Get Item Location
-        void AddItem(std::unique_ptr<Item> _item); // Function to Add Items in Character's Inventory
+        int GetItemLocation(Item::ItemType _itemType) const; // Function to Get Item Location
+        void AddItem(std::unique_ptr<Item::ItemController> _item); // Function to Add Items in Character's Inventory
         int GetSpecialAbilityLocation(SpecialAbilityType _specialAbilityType) const; // Function to Get Special Ability Location
         void AddSpecialAbility(std::unique_ptr<SpecialAbility> _specialAbility); // Function to Add Special Ability in Character's Skillset
         void PerformSpecialAbility(CharacterController* targetCharacter, PlayerSelectActionType selectedAction, SpecialAbility* _specialAbility);

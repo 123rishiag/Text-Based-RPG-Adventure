@@ -3,6 +3,7 @@
 
 namespace Character
 {
+    using namespace Item;
     using namespace Utility;
     using namespace std;
 
@@ -163,7 +164,7 @@ namespace Character
         return _itemLocation;
     }
 
-    void CharacterController::AddItem(unique_ptr<Item> _item) 
+    void CharacterController::AddItem(unique_ptr<ItemController> _item) 
     {
         bool _isAlreadyPresent = false;
         ItemType _itemType = _item->GetItemType();
