@@ -15,7 +15,6 @@ namespace Item
 
 		// Getters
 		std::string GetItemName() const;
-		// Pure Virtual Function to Get Item Type
 		ItemType GetItemType() const;
 	};
 }

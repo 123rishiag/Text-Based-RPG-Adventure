@@ -128,6 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="source\Ability\Controllers\BlockerSpecialAbilityController.cpp" />
+    <ClCompile Include="source\Ability\Controllers\CriticalHitSpecialAbilityController.cpp" />
+    <ClCompile Include="source\Ability\Controllers\GroundSlashSpecialAbilityController.cpp" />
+    <ClCompile Include="source\Ability\Controllers\HealthRegenerationSpecialAbilityController.cpp" />
+    <ClCompile Include="source\Ability\Controllers\LifeStealSpecialAbilityController.cpp" />
+    <ClCompile Include="source\Ability\Controllers\RangedAttackSpecialAbilityController.cpp" />
+    <ClCompile Include="source\Ability\Controllers\SpeedDashSpecialAbilityController.cpp" />
+    <ClCompile Include="source\Ability\SpecialAbilityController.cpp" />
     <ClCompile Include="source\Character\CharacterController.cpp" />
     <ClCompile Include="source\Character\Controllers\BossEnemyCharacterController.cpp" />
     <ClCompile Include="source\Character\Controllers\EnemyCharacterController.cpp" />
@@ -151,6 +159,15 @@
     <ClCompile Include="source\Main\GameManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="header\Ability\Controllers\BlockerSpecialAbilityController.h" />
+    <ClInclude Include="header\Ability\Controllers\CriticalHitSpecialAbilityController.h" />
+    <ClInclude Include="header\Ability\Controllers\GroundSlashSpecialAbilityController.h" />
+    <ClInclude Include="header\Ability\Controllers\HealthRegenerationSpecialAbilityController.h" />
+    <ClInclude Include="header\Ability\Controllers\LifeStealSpecialAbilityController.h" />
+    <ClInclude Include="header\Ability\Controllers\RangedAttackSpecialAbilityController.h" />
+    <ClInclude Include="header\Ability\Controllers\SpeedDashSpecialAbilityController.h" />
+    <ClInclude Include="header\Ability\SpecialAbilityController.h" />
+    <ClInclude Include="header\Ability\SpecialAbilityType.h" />
     <ClInclude Include="header\Character\CharacterController.h" />
     <ClInclude Include="header\Character\CharacterType.h" />
     <ClInclude Include="header\Character\Controllers\BossEnemyCharacterController.h" />

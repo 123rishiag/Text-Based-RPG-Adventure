@@ -4,6 +4,7 @@
 #include <iostream>  // For Standard IO Operations
 #include "../../header/Level/LevelNumber.h"
 #include "../../header/Item/ItemController.h"
+#include "../../header/Ability/SpecialAbilityController.h"
 
 namespace Character
 {
@@ -13,10 +14,6 @@ namespace Character
 
 namespace Level
 {
-    enum class SpecialAbilityType;
-
-    class SpecialAbility;
-
     class LevelController
     {
     private:
@@ -37,7 +34,7 @@ namespace Level
         std::unique_ptr<Character::CharacterController> GetEnemy(Character::CharacterType _characterType, int _enemyNumber, 
             Character::CharacterController* _character);
         // Function to Return Special Ability Pointer
-        std::unique_ptr<SpecialAbility> GetSpecialAbility(SpecialAbilityType _specialAbilityType);
+        std::unique_ptr<Ability::SpecialAbilityController> GetSpecialAbility(Ability::SpecialAbilityType _specialAbilityType);
         // Function to Return Item Pointer
         std::unique_ptr<Item::ItemController> GetItem(Item::ItemType _itemType);
 

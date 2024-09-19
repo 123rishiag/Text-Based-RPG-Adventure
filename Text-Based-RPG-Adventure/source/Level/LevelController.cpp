@@ -8,6 +8,7 @@ namespace Level
     using namespace Character;
     using namespace Character::Controller;
     using namespace Item;
+    using namespace Ability;
     using namespace std;
 
     LevelController::LevelController(int _numberOfEnemies, CharacterType _enemyType, LevelNumber _levelNumber)
@@ -70,24 +71,24 @@ namespace Level
         }
     }
 
-    unique_ptr<SpecialAbility> LevelController::GetSpecialAbility(SpecialAbilityType _specialAbilityType) 
+    unique_ptr<SpecialAbilityController> LevelController::GetSpecialAbility(SpecialAbilityType _specialAbilityType)
     {
         switch (_specialAbilityType) 
         {
         case SpecialAbilityType::CriticalHit:
-            return unique_ptr<SpecialAbility>(new CriticalHit(.10));
+            return unique_ptr<SpecialAbilityController>(new CriticalHit(.10));
         case SpecialAbilityType::Blocker:
-            return unique_ptr<SpecialAbility>(new Blocker(.10));
+            return unique_ptr<SpecialAbilityController>(new Blocker(.10));
         case SpecialAbilityType::LifeSteal:
-            return unique_ptr<SpecialAbility>(new LifeSteal(.10));
+            return unique_ptr<SpecialAbilityController>(new LifeSteal(.10));
         case SpecialAbilityType::RangedAttack:
-            return unique_ptr<SpecialAbility>(new RangedAttack(.10));
+            return unique_ptr<SpecialAbilityController>(new RangedAttack(.10));
         case SpecialAbilityType::GroundSlash:
-            return unique_ptr<SpecialAbility>(new GroundSlash(.10));
+            return unique_ptr<SpecialAbilityController>(new GroundSlash(.10));
         case SpecialAbilityType::SpeedDash:
-            return unique_ptr<SpecialAbility>(new SpeedDash(.10));
+            return unique_ptr<SpecialAbilityController>(new SpeedDash(.10));
         case SpecialAbilityType::HealthRegeneration:
-            return unique_ptr<SpecialAbility>(new HealthRegeneration(.10));
+            return unique_ptr<SpecialAbilityController>(new HealthRegeneration(.10));
         default:
             return nullptr;
         }
