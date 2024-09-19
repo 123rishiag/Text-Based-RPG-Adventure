@@ -1,9 +1,16 @@
 #include "../../header/Main/GameManager.h"
 #include "../../header/Utility/Random.h"
-#include<iostream>
+#include "../../header/Level/Controllers/LevelController1.h"
+#include "../../header/Level/Controllers/LevelController2.h"
+#include "../../header/Level/Controllers/LevelController3.h"
+#include "../../header/Level/Controllers/LevelController4.h"
+#include "../../header/Level/Controllers/LevelController5.h"
+#include "../../header/Level/Controllers/LevelController6.h"
 
 namespace Main
 {
+    using namespace Level;
+    using namespace Level::Controller;
     using namespace Utility;
     using namespace std;
 
@@ -32,22 +39,22 @@ namespace Main
             ));
     }
 
-    unique_ptr<Level> GameManager::InitializeLevel(LevelNumber _levelNumber) 
+    unique_ptr<LevelController> GameManager::InitializeLevel(LevelNumber _levelNumber)
     {
         switch (_levelNumber) 
         {
         case LevelNumber::Level1:
-            return unique_ptr<Level>(new Level1(1, CharacterType::Enemy));
+            return unique_ptr<LevelController>(new LevelController1(1, CharacterType::Enemy));
         case LevelNumber::Level2:
-            return unique_ptr<Level>(new Level2(2, CharacterType::Enemy));
+            return unique_ptr<LevelController>(new LevelController2(2, CharacterType::Enemy));
         case LevelNumber::Level3:
-            return unique_ptr<Level>(new Level3(3, CharacterType::Enemy));
+            return unique_ptr<LevelController>(new LevelController3(3, CharacterType::Enemy));
         case LevelNumber::Level4:
-            return unique_ptr<Level>(new Level4(4, CharacterType::Enemy));
+            return unique_ptr<LevelController>(new LevelController4(4, CharacterType::Enemy));
         case LevelNumber::Level5:
-            return unique_ptr<Level>(new Level5(5, CharacterType::Enemy));
+            return unique_ptr<LevelController>(new LevelController5(5, CharacterType::Enemy));
         case LevelNumber::Level6:
-            return unique_ptr<Level>(new Level6(1, CharacterType::BossEnemy));
+            return unique_ptr<LevelController>(new LevelController6(1, CharacterType::BossEnemy));
         default:
             return nullptr;
         }
