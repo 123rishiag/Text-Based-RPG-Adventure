@@ -1,16 +1,18 @@
 #include "../../../header/Level/Controllers/LevelController6.h"
-#include<iostream>
+#include "../../../header/Character/CharacterController.h"
+#include <iostream>
 
 namespace Level
 {
     namespace Controller
     {
+        using namespace Character;
         using namespace std;
 
         LevelController6::LevelController6(int _numberOfEnemies, CharacterType _enemyType)
             : LevelController(_numberOfEnemies, _enemyType, LevelNumber::Level6) { }
 
-        void LevelController6::UpgradeCharacter(Character* _character)
+        void LevelController6::UpgradeCharacter(CharacterController* _character)
         {
             if (_character->GetCharacterType() == CharacterType::Player) 
             {

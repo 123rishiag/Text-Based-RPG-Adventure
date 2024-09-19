@@ -1,7 +1,12 @@
 #include "../../header/Level/LevelController.h"
+#include "../../header/Character/CharacterController.h"
+#include "../../header/Character/Controllers/EnemyCharacterController.h"
+#include "../../header/Character/Controllers/BossEnemyCharacterController.h"
 
 namespace Level
 {
+    using namespace Character;
+    using namespace Character::Controller;
     using namespace std;
 
     LevelController::LevelController(int _numberOfEnemies, CharacterType _enemyType, LevelNumber _levelNumber)
@@ -12,7 +17,7 @@ namespace Level
     int LevelController::GetNumberOfEnemies() const { return numberOfEnemies; }
     CharacterType LevelController::GetEnemyType() const { return enemyType; }
 
-    unique_ptr<Character> LevelController::GetEnemy(CharacterType _characterType, int _enemyNumber, Character* _character) 
+    unique_ptr<CharacterController> LevelController::GetEnemy(CharacterType _characterType, int _enemyNumber, CharacterController* _character)
     {
         // Increase Difficulty as Level Increases
         float _difficultyFactor = static_cast<float>(GetLevelNumber()) / (static_cast<float>(LevelNumber::None) - 1.0f); // Difficulty of Level
@@ -38,7 +43,7 @@ namespace Level
             _rangedDamagePercentage = 10;
             _defence = static_cast<int>(_character->GetDefence() * _difficultyFactor);
             _defencePercentage = 20;
-            return make_unique<Enemy>(_characterName, _health, _healPercentage,
+            return make_unique<EnemyCharacterController>(_characterName, _health, _healPercentage,
                 _meleeDamage, _meleeDamagePercentage,
                 _rangedDamage, _rangedDamagePercentage,
                 _defence, _defencePercentage);
@@ -53,7 +58,7 @@ namespace Level
             _rangedDamagePercentage = 20;
             _defence = static_cast<int>(_character->GetDefence() * _difficultyFactor);
             _defencePercentage = 30;
-            return make_unique<BossEnemy>(_characterName, _health, _healPercentage,
+            return make_unique<BossEnemyCharacterController>(_characterName, _health, _healPercentage,
                 _meleeDamage, _meleeDamagePercentage,
                 _rangedDamage, _rangedDamagePercentage,
                 _defence, _defencePercentage);
@@ -112,11 +117,11 @@ namespace Level
         }
     }
 
-    void LevelController::GenerateEnemies(Character* _character) 
+    void LevelController::GenerateEnemies(CharacterController* _character)
     {
         for (int _currentEnemyNumber = 1; _currentEnemyNumber <= numberOfEnemies; _currentEnemyNumber++) 
         {
-            unique_ptr<Character> _currentEnemy = GetEnemy(enemyType, _currentEnemyNumber, _character);
+            unique_ptr<CharacterController> _currentEnemy = GetEnemy(enemyType, _currentEnemyNumber, _character);
             enemies.push_back(move(_currentEnemy));
         }
     }
@@ -133,7 +138,7 @@ namespace Level
         }
     }
 
-    Character* LevelController::GetEnemyAtIndex(int _characterIndex) const 
+    CharacterController* LevelController::GetEnemyAtIndex(int _characterIndex) const
     {
         if (_characterIndex >= 0 && _characterIndex < enemies.size()) 
         {

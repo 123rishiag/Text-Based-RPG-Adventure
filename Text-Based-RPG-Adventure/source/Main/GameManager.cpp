@@ -6,11 +6,14 @@
 #include "../../header/Level/Controllers/LevelController4.h"
 #include "../../header/Level/Controllers/LevelController5.h"
 #include "../../header/Level/Controllers/LevelController6.h"
+#include "../../header/Character/Controllers/PlayerCharacterController.h"
 
 namespace Main
 {
     using namespace Level;
     using namespace Level::Controller;
+    using namespace Character;
+    using namespace Character::Controller;
     using namespace Utility;
     using namespace std;
 
@@ -24,8 +27,8 @@ namespace Main
 
     void GameManager::CreatePlayer()
     {
-        player = unique_ptr<Character>(
-            new Player("Rishi", // Name of Character
+        player = unique_ptr<CharacterController>(
+            new PlayerCharacterController("Rishi", // Name of Character
                 300,     // Health of Character
                 60,      // Heal Percentage for Healing(1-100 only)
                 70,      // Melee Damage of Character
@@ -69,7 +72,7 @@ namespace Main
         }
     }
 
-    void GameManager::CharacterPerformAction(Character* _character1, Character* _character2) 
+    void GameManager::CharacterPerformAction(CharacterController* _character1, CharacterController* _character2)
     {
         PlayerSelectActionType selectedAction;
 
