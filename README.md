@@ -1,4 +1,4 @@
-# Text-Based RPG Adventure: The Murloc Menace
+# Text-Based RPG Adventure
 
 Welcome to **The Murloc Menace**, a text-based RPG adventure game developed in C++. This game combines storytelling, strategic battles, and item collection as you journey through dangerous lands to defeat the fearsome Boss Murloc and save your village.
 
@@ -16,31 +16,31 @@ In the serene lands of Eldoria, a peaceful village has fallen under the shadow o
 
 ## Level Awards
 
-- **`Level 1`**:
-  - Player Award: **Map** to guide the player's journey.
-  - Player Stat Increase: Max Health, Melee Damage, and Defence increase by 20%.
+- **Level 1**:
+  - `Player Award`: **Map** to guide the player's journey.
+  - `Player Stat Increase`: Max Health, Melee Damage, and Defence increase by 20%.
 
-- **`Level 2`**:
-  - Player Award: **Sword** unlocking the **Critical Hits** ability (10% chance of activation for massive damage).
-  - Player Stat Increase: Max Health, Melee Damage, and Defence increase by 20%.
+- **Level 2**:
+  - `Player Award`: **Sword** unlocking the **Critical Hits** ability (10% chance of activation for massive damage).
+  - `Player Stat Increase`: Max Health, Melee Damage, and Defence increase by 20%.
 
-- **`Level 3`**:
-  - Player Award: **Shield** unlocking the **Blocker** ability (20% chance of negating incoming damage).
-  - Player Stat Increase: Max Health, Melee Damage, and Defence increase by 20%.
+- **Level 3**:
+  - `Player Award`: **Shield** unlocking the **Blocker** ability (20% chance of negating incoming damage).
+  - `Player Stat Increase`: Max Health, Melee Damage, and Defence increase by 20%.
 
-- **`Level 4`**:
-  - Player Award: **Armour** unlocking the **Life Steal** ability (30% chance to recover health upon attacking).
-  - Player Stat Increase: Max Health, Melee Damage, and Defence increase by 20%.
+- **Level 4**:
+  - `Player Award`: **Armour** unlocking the **Life Steal** ability (30% chance to recover health upon attacking).
+  - `Player Stat Increase`: Max Health, Melee Damage, and Defence increase by 20%.
 
-- **`Level 5`**:
-  - Player Award: **Bow** unlocking the **Ranged Attack** ability (40% chance of protecting the player from the next attack).
-  - Player Stat Increase: Max Health, Melee Damage, and Defence increase by 20%.
+- **Level 5**:
+  - `Player Award`: **Bow** unlocking the **Ranged Attack** ability (40% chance of protecting the player from the next attack).
+  - `Player Stat Increase`: Max Health, Melee Damage, and Defence increase by 20%.
 
-- **`Level 6`**:
-  - Player Stat Increase: Max Health, Melee Damage, and Defence increase by 20%.
-  - **Boss Murloc**:
-    - Items Awarded: **Gauntlet**, **Boot**, **Amulet**.
-    - Special Abilities Unlocked: **Ground Slash** (30% chance), **Speed Dash** (20% chance), **Health Regeneration** (10% chance).
+- **Level 6**:
+  - `Player Stat Increase`: Max Health, Melee Damage, and Defence increase by 20%.
+  - **`Boss Murloc`**:
+    - `Items Awarded`: **Gauntlet**, **Boot**, **Amulet**.
+    - `Special Abilities Unlocked`: **Ground Slash** (30% chance), **Speed Dash** (20% chance), **Health Regeneration** (10% chance).
 
 ## Core Mechanics
 
