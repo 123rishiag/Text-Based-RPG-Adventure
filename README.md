@@ -38,7 +38,7 @@ In the serene lands of Eldoria, a peaceful village has fallen under the shadow o
 
 - **Level 6**:
   - `Player Stat Increase`: Max Health, Melee Damage, and Defence increase by 20%.
-  - **`Boss Murloc`**:
+  - **Boss Murloc**:
     - `Items Awarded`: **Gauntlet**, **Boot**, **Amulet**.
     - `Special Abilities Unlocked`: **Ground Slash** (30% chance), **Speed Dash** (20% chance), **Health Regeneration** (10% chance).
 
@@ -61,26 +61,26 @@ In the serene lands of Eldoria, a peaceful village has fallen under the shadow o
 ### Main Components:
 
 - **Main**:
-  - **`GameManager`**: Manages the game flow, including transitions between levels and the story.
+  - `GameManager`: Manages the game flow, including transitions between levels and the story.
   
 - **Character**:
-  - **`CharacterType`**: Defines character types (Player, Enemy, Boss Enemy).
-  - **`CharacterController`**: Manages character behavior and upgrades.
+  - `CharacterType`: Defines character types (Player, Enemy, Boss Enemy).
+  - `CharacterController`: Manages character behavior and upgrades.
     - **Sub Controllers**: **`PlayerCharacterController`**, **`EnemyCharacterController`**, **`BossEnemyCharacterController`**
 
 - **Level**:
-  - **`LevelNumber`**: Defines the level numbers.
-  - **`LevelController`**: Handles level-specific logic and progression.
+  - `LevelNumber`: Defines the level numbers.
+  - `LevelController`: Handles level-specific logic and progression.
     - **Sub Controllers**: **`LevelController1`**, **`LevelController2`**, **`LevelController3`**, **`LevelController4`**, **`LevelController5`**, **`LevelController6`**
 
 - **Item**:
-  - **`ItemType`**: Defines the different types of items collected during the game.
-  - **`ItemController`**: Manages item effects and integration.
+  - `ItemType`: Defines the different types of items collected during the game.
+  - `ItemController`: Manages item effects and integration.
     - **Sub Controllers**: **`MapItemController`**, **`SwordItemController`**, **`ShieldItemController`**, **`ArmourItemController`**, **`BowItemController`**, **`GauntletItemController`**, **`BootItemController`**, **`AmuletItemController`**
 
 - **Ability**:
-  - **`SpecialAbilityType`**: Defines the special abilities available to players and enemies.
-  - **`SpecialAbilityController`**: Manages special ability effects.
+  - `SpecialAbilityType`: Defines the special abilities available to players and enemies.
+  - `SpecialAbilityController`: Manages special ability effects.
     - **Sub Controllers**: **`CriticalHitSpecialAbilityController`**, **`BlockerSpecialAbilityController`**, **`LifeStealSpecialAbilityController`**, **`RangedAttackSpecialAbilityController`**, **`GroundSlashSpecialAbilityController`**, **`SpeedDashSpecialAbilityController`**, **`HealthRegenerationSpecialAbilityController`**
 
 ### Additional Core Components:
