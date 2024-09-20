@@ -1,6 +1,6 @@
-# Text-Based RPG Adventure
+# Text Based RPG Adventure
 
-Welcome to **The Murloc Menace**, a text-based RPG adventure game developed in C++. This game combines storytelling, strategic battles, and item collection as you journey through dangerous lands to defeat the fearsome Boss Murloc and save your village.
+Welcome to **The Murloc Menace**, a text based RPG adventure game developed in C++. This game combines storytelling, strategic battles, and item collection as you journey through dangerous lands to defeat the fearsome Boss Murloc and save your village.
 
 ## Story
 
