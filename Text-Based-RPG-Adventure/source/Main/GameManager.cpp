@@ -206,7 +206,7 @@ namespace Main
         cout << "1) Navigate through 6 challenging levels, each with increasing difficulty.\n";
         cout << "2) Engage in battle with enemies using attacks, or choose to heal.\n";
         cout << "3) Collect essential items after completing each level to enhance your abilities.\n";
-        cout << "4) Utilize special abilities that unlock as you progress, each with a 10% chance of activation during attacks.\n";
+        cout << "4) Utilize special abilities that unlock as you progress, each with some % chance of activation during attacks.\n";
         cout << "5) Confront the Boss Murloc in a final epic battle in Level 6, utilizing everything you've gathered.\n\n";
 
         cout << "Items and Abilities:\n";
