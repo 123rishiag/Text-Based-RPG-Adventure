@@ -66,27 +66,27 @@ In the serene lands of Eldoria, a peaceful village has fallen under the shadow o
 - **Character**:
   - `CharacterType`: Defines character types (Player, Enemy, Boss Enemy).
   - `CharacterController`: Manages character behavior and upgrades.
-    - **Sub Controllers**: **`PlayerCharacterController`**, **`EnemyCharacterController`**, **`BossEnemyCharacterController`**
+    - **Sub Controllers**: `PlayerCharacterController`, `EnemyCharacterController`, `BossEnemyCharacterController`
 
 - **Level**:
   - `LevelNumber`: Defines the level numbers.
   - `LevelController`: Handles level-specific logic and progression.
-    - **Sub Controllers**: **`LevelController1`**, **`LevelController2`**, **`LevelController3`**, **`LevelController4`**, **`LevelController5`**, **`LevelController6`**
+    - **Sub Controllers**: `LevelController1`, `LevelController2`, `LevelController3`, `LevelController4`, `LevelController5`, `LevelController6`
 
 - **Item**:
   - `ItemType`: Defines the different types of items collected during the game.
   - `ItemController`: Manages item effects and integration.
-    - **Sub Controllers**: **`MapItemController`**, **`SwordItemController`**, **`ShieldItemController`**, **`ArmourItemController`**, **`BowItemController`**, **`GauntletItemController`**, **`BootItemController`**, **`AmuletItemController`**
+    - **Sub Controllers**: `MapItemController`, `SwordItemController`, `ShieldItemController`, `ArmourItemController`, `BowItemController`, `GauntletItemController`, `BootItemController`, `AmuletItemController`
 
 - **Ability**:
   - `SpecialAbilityType`: Defines the special abilities available to players and enemies.
   - `SpecialAbilityController`: Manages special ability effects.
-    - **Sub Controllers**: **`CriticalHitSpecialAbilityController`**, **`BlockerSpecialAbilityController`**, **`LifeStealSpecialAbilityController`**, **`RangedAttackSpecialAbilityController`**, **`GroundSlashSpecialAbilityController`**, **`SpeedDashSpecialAbilityController`**, **`HealthRegenerationSpecialAbilityController`**
+    - **Sub Controllers**: `CriticalHitSpecialAbilityController`, `BlockerSpecialAbilityController`, `LifeStealSpecialAbilityController`, `RangedAttackSpecialAbilityController`, `GroundSlashSpecialAbilityController`, `SpeedDashSpecialAbilityController`, `HealthRegenerationSpecialAbilityController`
 
 ### Additional Core Components:
 
 - **Utility**:
-  - **`Random`**: Provides random number generation for damage, ability activations, and enemy behavior.
+  - `Random`: Provides random number generation for damage, ability activations, and enemy behavior.
 
 - **Main**: Entry point of the game.
 
